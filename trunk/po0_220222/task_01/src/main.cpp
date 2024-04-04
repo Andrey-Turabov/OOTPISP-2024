@@ -1,6 +1,5 @@
 #include <iostream>
 #include "class.h"
-#include "newfile.h"
 #include <vector>
 #include <memory>
 
