@@ -5,12 +5,7 @@
 
 class Adres {
 public:
-	Adres()
-	{
-		name = "";
-		street = "";
-		number = 0;
-	}
+	Adres();
 	Adres(const std::string& n_name, const std::string& n_street, int n_price);
 	Adres(Adres const &old_book) = delete;
 	Adres& operator = (const Adres&) = delete;
@@ -24,8 +19,8 @@ public:
 	void setNumber ( const int n_number);
 
 private:
-	std::string name;
-	std::string street;
-	int number;
+	std::string name = "";
+	std::string street= "";
+	int number = 0;
 };
 #endif

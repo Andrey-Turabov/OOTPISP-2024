@@ -31,15 +31,15 @@
 		std::cout << this->number;
 	}
 	
-	std::string Book::getName() const
+	std::string Adres::getName() const
 		{ return name;}
-	void Book::setName(const std::string& n_name)
+	void Adres::setName(const std::string& n_name)
 		{name = n_name;}	
-	std::string Book::getStreet() const
+	std::string Adres::getStreet() const
 		{ return street;}
-	void Book::setStreet(const std::string& n_street)
+	void Adres::setStreet(const std::string& n_street)
 		{street = n_street;}
-	int Book::getNumber() const
+	int Adres::getNumber() const
 		{ return Number;}
-	void Book::setNumber (const int n_number)
+	void Adres::setNumber (const int n_number)
 		{ number = n_number;}
