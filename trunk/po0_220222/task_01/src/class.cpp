@@ -40,6 +40,6 @@
 	void Adres::setStreet(const std::string& n_street)
 		{street = n_street;}
 	int Adres::getNumber() const
-		{ return Number;}
+		{ return number;}
 	void Adres::setNumber (const int n_number)
 		{ number = n_number;}
