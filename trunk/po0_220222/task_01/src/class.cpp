@@ -13,17 +13,6 @@
 		std::cout << "Constructor with params was called " << this << std::endl;
 	}
 	
-	//Adres::Adres(Book const &old_adres)
-	//	:name(old_adres.name), author(old_adres.street), price(old_adres.number)
-	//{
-	//	std::cout << "Copy constructor was called " << this << std::endl;
-	//}
-	
-	//Adres::~Adres()
-	//{
-	//	std::cout << "Destructor was called " << this << std::endl;
-	//}
-	
 	void Adres::print() const
 	{
 		std::cout << this->name;
