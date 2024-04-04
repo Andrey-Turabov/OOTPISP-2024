@@ -13,8 +13,8 @@
 		std::cout << "Constructor with params was called " << this << std::endl;
 	}
 	
-	//Adres::Adres(Book const &old_book)
-	//	:name(old_book.name), author(old_book.author), price(old_book.price)
+	//Adres::Adres(Book const &old_adres)
+	//	:name(old_adres.name), author(old_adres.street), price(old_adres.number)
 	//{
 	//	std::cout << "Copy constructor was called " << this << std::endl;
 	//}
