@@ -19,10 +19,6 @@ int main()
 	std::vector <Adres*> road;
 
 	road.push_back(&home);  
-	
-	Adres home1(home);
-
-	road.push_back(&home1); 
 
 	Adres adres;
 
