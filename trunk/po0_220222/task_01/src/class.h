@@ -7,8 +7,6 @@ class Adres {
 public:
 	Adres();
 	Adres(const std::string& n_name, const std::string& n_street, int n_price);
-	Adres(Adres const& old_adres) = delete;
-	Adres& operator = (const Adres&) = delete;
 	void print() const;	
 	std::string getName() const;
 	void setName(const std::string& n_name);	

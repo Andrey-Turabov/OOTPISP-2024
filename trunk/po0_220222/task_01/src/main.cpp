@@ -28,11 +28,10 @@ int main()
 
 	std::cout << road[1]->getName() << std::endl;
 	
-	std::array<Adres, 3> n_road =  {  
+	std::array<Adres, 3> n_road = {
 		Adres("Дом", "Советская", 1),
 		Adres("Берлога", "Ленина", 2),
-		Adres("Палатка", "Московская", 0)
-	};
+		Adres("Палатка", "Московская", 0)};
 
 	system("pause");
 }
