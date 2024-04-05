@@ -33,5 +33,5 @@ int main()
 		Adres("Берлога", "Ленина", 2),
 		Adres("Палатка", "Московская", 0)};
 
-	system("pause");
+	std::cout << n_road[1].getName();
 }
