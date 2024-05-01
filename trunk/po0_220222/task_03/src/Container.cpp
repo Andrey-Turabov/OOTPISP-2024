@@ -39,7 +39,7 @@ int Container::size() const
 	return _size;
 }
 
-Geometry* Container::operator[](const int &index)
+Geometry* Container::operator[](const int index)
 {
 
 	try {

@@ -4,8 +4,7 @@
 
 Triangle::Triangle(const float a, const float b, const float c) : a(a), b(b), c(c)
 {
-	this->CountArea();
-	this->CountPerimeter();
+	
 }
 
 void Triangle::SetA(const float _a)

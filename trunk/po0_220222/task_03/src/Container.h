@@ -23,7 +23,7 @@ public:
 	void Add(Geometry* _geom);
 	int size() const;
 
-	Geometry* operator[](const int &index);
+	Geometry* operator[](const int index);
 
 private:
 	int _size = 0;

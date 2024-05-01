@@ -3,8 +3,7 @@
 
 Circle::Circle(const float _radius) : radius(_radius)
 {
-	this->CountArea();
-	this->CountPerimeter();
+	
 }
 
 float Circle::GetRadius() const

@@ -3,6 +3,7 @@
 
 Geometry::Geometry(const float _area, const float _perimeter):area(_area), perimeter(_perimeter)
 {
+
 }
 
 void Geometry::SetArea(const float _area)

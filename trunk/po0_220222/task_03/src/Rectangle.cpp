@@ -3,8 +3,7 @@
 
 Rectangle::Rectangle(const float _length, const float _width) : length(_length), width(_width)
 {
-	this->CountArea();
-	this->CountPerimeter();
+	
 }
 
 void Rectangle::SetLength(const float _length)
