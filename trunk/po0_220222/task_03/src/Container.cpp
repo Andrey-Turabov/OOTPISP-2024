@@ -56,6 +56,6 @@ Geometry* Container::operator[](const int &index)
 	{
 		std::cout << error_message << std::endl;
 		Geometry geom;
-		return &geom;
+		return nullptr;
 	}
 }
