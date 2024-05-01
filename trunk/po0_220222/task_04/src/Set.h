@@ -31,8 +31,8 @@ public:
 
 	Set& operator=(const Set<T>& a);
 
-	friend std::ostream& operator << (std::ostream &out,  Set<T>& a);
-	friend std::istream& operator >> (std::istream &in, Set<T>& a);
+	friend std::ostream& operator << (std::ostream &,  Set<T>& );
+	friend std::istream& operator >> (std::istream &, Set<T>& );
 
 	void Add(const T a);
 
@@ -209,3 +209,5 @@ inline Unit<T>::Unit(const T a, const int _index)
 	value = a;
 	index = _index;
 }
+
+#endif
