@@ -26,6 +26,16 @@ float Geometry::GetPerimeter() const
 	return perimeter;
 }
 
+void Geometry::CountArea() 
+{
+	this->SetArea(0.00);
+}
+
+void Geometry::CountPerimeter()
+{
+	this->SetPerimeter(0.00);
+}
+
 void Geometry::Print() const
 {
 	std::cout << "Perimeter: " << perimeter << std::endl;
