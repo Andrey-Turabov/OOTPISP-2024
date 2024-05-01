@@ -8,11 +8,10 @@ class Final_exam :
 {
 public:
     Final_exam() = default;
-    Final_exam(const std::string& _examinator ,const int _mark, const bool _isWritten, const std::string& _name, const bool _passed);
-    ~Final_exam() = default;
+    Final_exam(const std::string_view _examinator ,const int _mark, const bool _isWritten, const std::string_view _name, const bool _passed);
     void Print() const override;
 
-    void SetExaminator(const std::string& _examinator);
+    void SetExaminator(const std::string_view _examinator);
     std::string GetExaminator() const;
 private:
     std::string examinator = "";

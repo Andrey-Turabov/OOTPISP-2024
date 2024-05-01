@@ -7,8 +7,8 @@ class Challenge
 {
 public:
 	Challenge() = default;
-	Challenge(const std::string& _name, const bool _passed);
-	~Challenge() = default;
+	Challenge(const std::string_view _name, const bool _passed);
+	virtual ~Challenge() = default;
 	void Add();
 	void SetNext(Challenge* nextChallenge);
 	virtual void Print() const;
@@ -17,11 +17,11 @@ public:
 	bool GetResult() const;
 	void SetResult(const bool _passed);
 	std::string GetExaminee() const;
-	void SetExaminee(const std::string& _examinee);
+	void SetExaminee(const std::string_view _examinee);
 private:
 
-	bool passed = false;
 	std::string examinee_name = "";
+	bool passed = false;
 	Challenge* next = nullptr;
 protected:
 	static Challenge *begin;

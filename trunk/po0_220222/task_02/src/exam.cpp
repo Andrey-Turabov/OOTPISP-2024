@@ -1,7 +1,7 @@
 #include "exam.h"
 #include <iostream>
 
-Exam::Exam(const int _mark, const bool _isWritten, const std::string& _name, const bool _passed) : Challenge(_name, _passed), isWritten(_isWritten), mark(_mark)
+Exam::Exam(const int _mark, const bool _isWritten, const std::string_view _name, const bool _passed) : Challenge(_name, _passed), isWritten(_isWritten), mark(_mark)
 {
 	this->Add();
 }

@@ -9,8 +9,7 @@ class Test :
 {
 public:
     Test() = default;
-    Test(const int _noq, const std::string& _name, const bool _passed);
-    ~Test() = default;
+    Test(const int _noq, const std::string_view _name, const bool _passed);
     void Print() const override;
 
     int GetAmount() const;

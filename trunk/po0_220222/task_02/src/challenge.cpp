@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-Challenge::Challenge(const std::string& _name, const bool _passed) : examinee_name(_name), passed(_passed)
+Challenge::Challenge(const std::string_view _name, const bool _passed) : examinee_name(_name), passed(_passed)
 {
 	this->Add();
 }
@@ -67,7 +67,7 @@ std::string Challenge::GetExaminee() const
 	return examinee_name;
 }
 
-void Challenge::SetExaminee(const std::string& _examinee)
+void Challenge::SetExaminee(const std::string_view _examinee)
 {
 	examinee_name = _examinee;
 }

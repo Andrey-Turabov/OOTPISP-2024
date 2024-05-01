@@ -1,6 +1,6 @@
 #include "test.h"
 
-Test::Test(const int _noq, const std::string& _name, const bool _passed) : Challenge(_name, _passed), number_of_questions(_noq)
+Test::Test(const int _noq, const std::string_view _name, const bool _passed) : Challenge(_name, _passed), number_of_questions(_noq)
 {
 	this->Add();
 }

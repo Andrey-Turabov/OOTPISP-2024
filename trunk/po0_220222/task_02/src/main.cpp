@@ -7,9 +7,9 @@
 
 int main()
 {
-	Exam first(10, 1, "Thomas", 1);
-	Final_exam second("Pinchyk", 10, 1, "Thomas", 1);
-	Test third(50, "Thomas", 0);
+	Exam first(10, true, "Thomas", true);
+	Final_exam second("Pinchyk", 10, true, "Thomas", true);
+	Test third(50, "Thomas", false);
 	Challenge fourth;
 
 	first.SetExaminee("Thomas Shelby");
