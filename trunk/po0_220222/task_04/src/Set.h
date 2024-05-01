@@ -2,6 +2,7 @@
 #ifndef SETH
 #define SETH
 #include <iostream>
+#include <memory>
 #include <cmath>
 
 using namespace std;
@@ -30,8 +31,8 @@ public:
 
 	Set& operator=(const Set<T>& a);
 
-	friend std::ostream& operator << <T>(std::ostream &out,  Set<T>& a);
-	friend std::istream& operator >> <T>(std::istream &in, Set<T>& a);
+	friend std::ostream& operator << <>(std::ostream &out,  Set<T>& a);
+	friend std::istream& operator >> <>(std::istream &in, Set<T>& a);
 
 	void Add(const T a);
 
