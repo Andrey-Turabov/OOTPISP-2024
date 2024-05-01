@@ -31,8 +31,8 @@ public:
 
 	Set& operator=(const Set<T>& a);
 
-	friend std::ostream& operator << (std::ostream &,  Set<T>& );
-	friend std::istream& operator >> (std::istream &, Set<T>& );
+	friend std::ostream& operator << (std::ostream &,  Set<T>& )<>;
+	friend std::istream& operator >> (std::istream &, Set<T>& )<>;
 
 	void Add(const T a);
 
