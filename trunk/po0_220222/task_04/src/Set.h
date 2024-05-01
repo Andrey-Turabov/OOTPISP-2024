@@ -10,7 +10,7 @@ using namespace std;
 template <class T>
 class Unit {
 	public:
-	Unit<T>(const T a, const int _index);
+	Unit(const T a, const int _index);
 	T value;
 	int index = 0;
 	Unit* left = nullptr;
