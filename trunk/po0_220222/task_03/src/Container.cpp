@@ -44,7 +44,7 @@ Geometry* Container::operator[](const int index)
 
 	try {
 		if (index < 0 || index >= _size)
-			throw  1;
+			throw  std::string{ "your index is out of range\nReturn empty element" };
 	Container_unit* ptr = begin;
 	for (int i = 0; i < index; i++)
 	{
@@ -52,9 +52,9 @@ Geometry* Container::operator[](const int index)
 	}
 	return ptr->geom;
 	}
-	catch (1)
+	catch (const std::string& error_message)
 	{
-		std::cout << "your index is out of range\nReturn empty element" << std::endl;
+		std::cout << error_message << std::endl;
 		Geometry geom;
 		return nullptr;
 	}
