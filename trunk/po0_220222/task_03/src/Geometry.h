@@ -8,6 +8,7 @@ class Geometry
 public:
 	Geometry() = default;
 	Geometry(const float _area, const float _perimeter);
+	Geometry(const Geometry& old) = delete;
 	virtual ~Geometry() = default;
 	void SetArea(const float _area);
 	float GetArea() const;
@@ -20,7 +21,6 @@ public:
 	virtual void Print() const;
 	void operator=(const Geometry &right);
 	bool operator==(const Geometry &right) const;
-	bool operator!=(const Geometry &right) const;
 
 private:
 	float area = 0.00;

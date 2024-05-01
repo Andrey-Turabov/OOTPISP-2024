@@ -3,8 +3,8 @@
 
 Rectangle::Rectangle(const float _length, const float _width) : length(_length), width(_width)
 {
-	CountArea();
-	CountPerimeter();
+	this->CountArea();
+	this->CountPerimeter();
 }
 
 void Rectangle::SetLength(const float _length)
@@ -49,12 +49,13 @@ void Rectangle::Print() const
 	Geometry::Print();
 }
 
-void Rectangle::operator=(const Rectangle &right)
+Rectangle* Rectangle::operator=(const Rectangle &right)
 {
 	this->width = right.width;
 	this->length = right.length;
 	this->SetArea(right.GetArea());
 	this->SetPerimeter(right.GetPerimeter());
+	return this;
 }
 
 bool Rectangle::operator==(const Rectangle &right) const
@@ -63,9 +64,4 @@ bool Rectangle::operator==(const Rectangle &right) const
 		return true;
 	else
 		return false;
-}
-
-bool Rectangle::operator!=(const Rectangle &right) const
-{
-	return !(*this == right);
 }

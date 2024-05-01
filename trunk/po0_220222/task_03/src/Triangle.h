@@ -10,7 +10,7 @@ class Triangle :
 public:
     Triangle() = default;
     Triangle(const float a, const float b, const float c);
-    ~Triangle() = default;
+    Triangle(const Triangle& old) = delete;
 
     void SetA(const float _a);
     float GetA() const;
@@ -23,9 +23,8 @@ public:
     void CountPerimeter() override;
     void Print() const override;
 
-    void operator=(const Triangle &right);
+    Triangle* operator=(const Triangle &right);
     bool operator==(const Triangle &right) const;
-    bool operator!=(const Triangle &right) const;
 
 private:
     float a=0.00;

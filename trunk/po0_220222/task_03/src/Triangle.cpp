@@ -4,8 +4,8 @@
 
 Triangle::Triangle(const float a, const float b, const float c) : a(a), b(b), c(c)
 {
-	CountArea();
-	CountPerimeter();
+	this->CountArea();
+	this->CountPerimeter();
 }
 
 void Triangle::SetA(const float _a)
@@ -64,13 +64,14 @@ void Triangle::Print() const
 	Geometry::Print();
 }
 
-void Triangle::operator=(const Triangle &right)
+Triangle* Triangle::operator=(const Triangle &right)
 {
 	this->a = right.a;
 	this->b = right.b;
 	this->c = right.c;
 	this->SetArea(right.GetArea());
 	this->SetPerimeter(right.GetPerimeter());
+	return this;
 }
 
 bool Triangle::operator==(const Triangle &right) const
@@ -81,7 +82,3 @@ bool Triangle::operator==(const Triangle &right) const
 		return false;
 }
 
-bool Triangle::operator!=(const Triangle &right) const
-{
-	return !(*this==right);
-}

@@ -13,10 +13,10 @@ public:
 	class Container_unit
 	{
 	public:
-		Container_unit(Geometry* _geom) : geom(_geom), next(nullptr)
+		explicit Container_unit(Geometry* _geom) : geom(_geom)
 		{}
 		Geometry* geom;
-		Container_unit* next;
+		Container_unit* next = nullptr;
 	};
 
 	void ShowAll() const;
