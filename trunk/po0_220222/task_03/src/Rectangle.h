@@ -11,6 +11,7 @@ public:
     Rectangle() = default;
     Rectangle(const float _length, const float _width);
     Rectangle(const Rectangle& old) = delete;
+    ~Rectangle() override = default;
     void SetLength(const float _length);
     float GetLength() const;
     void SetWidth(const float _width);
@@ -20,7 +21,6 @@ public:
     void CountPerimeter() override;
     void Print() const override;
 
-    Rectangle* operator=(const Rectangle &right);
     bool operator==(const Rectangle &right) const;
 private:
     float length = 0.00;

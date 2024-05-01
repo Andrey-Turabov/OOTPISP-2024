@@ -43,11 +43,6 @@ void Geometry::Print() const
 
 }
 
-void Geometry::operator=(const Geometry &right)
-{
-	this->area = right.area;
-	this->perimeter = right.perimeter;
-}
 
 bool Geometry::operator==(const Geometry &right) const
 {

@@ -48,15 +48,6 @@ void Rectangle::Print() const
 	Geometry::Print();
 }
 
-Rectangle* Rectangle::operator=(const Rectangle &right)
-{
-	this->width = right.width;
-	this->length = right.length;
-	this->SetArea(right.GetArea());
-	this->SetPerimeter(right.GetPerimeter());
-	return this;
-}
-
 bool Rectangle::operator==(const Rectangle &right) const
 {
 	if ((this->length == right.length && this->width == right.width) || (this->width == right.length && this->length == right.width))

@@ -63,15 +63,6 @@ void Triangle::Print() const
 	Geometry::Print();
 }
 
-Triangle* Triangle::operator=(const Triangle &right)
-{
-	this->a = right.a;
-	this->b = right.b;
-	this->c = right.c;
-	this->SetArea(right.GetArea());
-	this->SetPerimeter(right.GetPerimeter());
-	return this;
-}
 
 bool Triangle::operator==(const Triangle &right) const
 {

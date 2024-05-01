@@ -19,7 +19,6 @@ public:
 	virtual void CountArea();
 	virtual void CountPerimeter();
 	virtual void Print() const;
-	void operator=(const Geometry &right);
 	bool operator==(const Geometry &right) const;
 
 private:

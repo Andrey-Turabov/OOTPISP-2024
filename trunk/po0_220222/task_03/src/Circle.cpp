@@ -35,14 +35,6 @@ void Circle::Print() const
 	Geometry::Print();
 }
 
-Circle* Circle::operator=(const Circle &right)
-{
-	this->radius = right.radius;
-	this->SetArea(right.GetArea());
-	this->SetPerimeter(right.GetPerimeter());
-	return this;
-}
-
 bool Circle::operator==(const Circle &right) const
 {
 	if (this->radius == right.radius)
