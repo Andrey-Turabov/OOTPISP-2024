@@ -40,18 +40,4 @@ void Money::SetR(const long r)
 	rubles = r;
 }
 
-std::ostream& operator<<(std::ostream &out, const Money& a)
-{
-	
-	out << a.GetR() <<','<< a.GetK() << std::endl;
-	return out;
-}
 
-std::istream& operator>>(std::istream &in, Money& a)
-{
-	std::cout << "Enter amount of rubles" << std::endl;
-	in >> a.rubles;
-	std::cout << "Enter amount of kopeck" << std::endl;
-	in >> a.kopeck;
-	return in;
-}
