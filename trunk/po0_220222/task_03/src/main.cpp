@@ -27,8 +27,8 @@ int main()
 	arr.Add(&tr2);
 
 	Circle cr1(5);
-	Circle cr2;
-	cr2 = cr1;
+	Circle cr2(4);
+
 
 	if (cr1 == cr2)
 	{
@@ -38,7 +38,7 @@ int main()
 	{
 		std::cout << "Circles are different" << std::endl;
 	}
-
+	cr2 = cr1;
 	arr.Add(&cr1);
 	arr.Add(&cr2);
 
