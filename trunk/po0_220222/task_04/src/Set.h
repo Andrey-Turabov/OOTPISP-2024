@@ -35,12 +35,12 @@ public:
 	friend std::istream& operator >> <T>(std::istream &in,  Set<T>& a);
 
 	void Add(const T a);
-
+	Unit<T> Find(const int index);
 
 private:
 	int _size = 0;
 	Unit<T>* head;
-	Unit<T> Find(const int index);
+
 
 };
 
@@ -137,7 +137,7 @@ Unit<T> Set<T>::Find(const int index)
 template<class T>
 T Set<T>::operator[](const int index) const
 {
-	return Find(index).value;
+	return this->Find(index).value;
 }
 
 template<class T>
