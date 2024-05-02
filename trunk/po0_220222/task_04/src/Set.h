@@ -181,7 +181,7 @@ Set<T> Set<T>:: operator * (const Set<T>& a)
 }
 
 
-template<class T>
+template<class T> inline
 std::ostream& operator << (std::ostream &out, const Set<T>& a)
 {
 	for (int i = 0; i < a(); i++)
@@ -203,7 +203,7 @@ std::istream& operator >> (std::istream &in, Set<T>& a)
 }
 
 
-template<class T> inline
+template<class T>
 inline Unit<T>::Unit(const T a, const int _index)
 {
 	value = a;
