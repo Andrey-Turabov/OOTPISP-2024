@@ -25,7 +25,7 @@ public:
 	Set(const Set<T>& a);
 	~Set()= default;
 
-	T* operator [] (const int index);
+	T operator [] (const int index) const;
 	int	operator() () const;
 	Set operator * (const Set<T>& a);
 
@@ -135,9 +135,9 @@ Unit<T> Set<T>::Find(const int index)
 }
 
 template<class T>
-T* Set<T>::operator[](const int index)
+T Set<T>::operator[](const int index) const
 {
-	return &(Find(index).value);
+	return Find(index).value;
 }
 
 template<class T>

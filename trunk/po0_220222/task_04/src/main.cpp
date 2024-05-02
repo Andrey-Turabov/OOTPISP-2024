@@ -14,5 +14,5 @@ int main()
 	moneybag.Add(Money(3.28));
 	moneybag.Add(Money(55.99));
 	moneybag.Add(Money(1.1));
-	std::cout << moneybag;
+	moneybag.operator();
 }
