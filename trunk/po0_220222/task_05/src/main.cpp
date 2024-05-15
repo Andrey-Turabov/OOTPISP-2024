@@ -138,13 +138,11 @@ void putMinToEnd(std::vector<T> &vec)
 template <class T>
 void findByKeyAndDelete(std::vector<T> &vec, T key)
 {
-	int index = 0;
 	for (int i = 0; i < vec.size(); i++)
 	{
 		if (vec[i] == key)
 		{
-			index = i;
-			vec.erase(vec.begin()+index);
+			vec.erase(vec.begin()+i);
 			break;
 		}
 	}
@@ -154,24 +152,20 @@ void findByKeyAndDelete(std::vector<T> &vec, T key)
 template <class T>
 void addAllMinMaxSum(std::vector<T> &vec)
 {
-	int index = 0;
 	T min = vec[0];
 	for (int i = 1; i < vec.size(); i++)
 	{
 		if (vec[i] < min)
 		{
-			index = i;
 			min = vec[i];
 		}
 	}
 
-	int index1 = 0;
 	T max = vec[0];
 	for (int i = 1; i < vec.size(); i++)
 	{
 		if (vec[i] > max)
 		{
-			index1 = i;
 			max = vec[i];
 		}
 	}
