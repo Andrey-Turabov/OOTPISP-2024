@@ -3,8 +3,8 @@
 
 Money::Money(const double a)
 
-	:kopeck(static_cast<int>((a - static_cast<int>(a)) * 100)),
-	rubles(static_cast<long>(a))
+	:rubles(static_cast<long>(a)),
+	kopeck(static_cast<int>((a - static_cast<int>(a)) * 100))
 {
 }
 
@@ -16,41 +16,6 @@ bool Money::operator==(const Money& a) const
 		return false;
 }
 
-bool Money::operator<(const Money& a) const
-{
-	if (this->GetR() < a.GetR())
-	{
-		return true;
-	}
-	else if (this->GetR() > a.GetR())
-	{
-		return false;
-	}
-	else if (this->GetK() < a.GetK())
-	{
-		return true;
-	}
-	else
-		return false;
-}
-
-bool Money::operator>(const Money& a) const
-{
-	if (this->GetR() > a.GetR())
-	{
-		return true;
-	}
-	else if (this->GetR() < a.GetR())
-	{
-		return false;
-	}
-	else if (this->GetK() > a.GetK())
-	{
-		return true;
-	}
-	else
-		return false;
-}
 
 Money Money::operator+(const Money& a) const
 {

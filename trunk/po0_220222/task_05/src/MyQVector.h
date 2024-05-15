@@ -57,7 +57,7 @@ inline void MyQVector<T>::putMinToEnd()
 				tmp = tmp1;
 			}
 	}
-	int len = static_cast<int>(_q.size());
+	auto len = static_cast<int>(_q.size());
 	tmp_q = _q;
 	for (int i = 0; i < len; i++)
 	{
@@ -82,7 +82,7 @@ inline void MyQVector<T>::findByKeyAndDelete(T key)
 		}
 		tmp_q.pop();
 	}
-	int len = static_cast<int>(_q.size());
+	auto len = static_cast<int>(_q.size());
 	tmp_q = _q;
 	for (int i = 0; i < len; i++)
 	{
@@ -122,7 +122,7 @@ inline void MyQVector<T>::addAllMinMaxSum()
 	}
 
 	T sum = min + max;
-	int len = static_cast<int>(_q.size());
+	auto len = static_cast<int>(_q.size());
 	tmp_q = _q;
 	for (int i = 0; i < len; i++)
 	{

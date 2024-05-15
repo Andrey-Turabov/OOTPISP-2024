@@ -177,7 +177,7 @@ void addAllMinMaxSum(std::vector<T> &vec)
 	}
 
 	T sum = min + max;
-	int len = static_cast<int>(vec.size());
+	auto len = static_cast<int>(vec.size());
 
 	for (int i = 0; i < len; i++)
 	{
@@ -200,7 +200,7 @@ void QputMinToEnd(std::queue<T> &q)
 			tmp = tmp1;
 		}
 	}
-	int len = static_cast<int>(q.size());
+	auto len = static_cast<int>(q.size());
 	tmp_q = q;
 	for (int i = 0; i < len; i++)
 	{
@@ -227,7 +227,7 @@ void QfindByKeyAndDelete(std::queue<T> &q, T key)
 		}
 		tmp_q.pop();
 	}
-	int len = static_cast<int>(q.size());
+	auto len = static_cast<int>(q.size());
 	tmp_q = q;
 	for (int i = 0; i < len; i++)
 	{
@@ -266,7 +266,7 @@ void QaddAllMinMaxSum(std::queue<T> &q)
 	}
 
 	T sum = min + max;
-	int len = static_cast<int>(q.size());
+	auto len = static_cast<int>(q.size());
 	tmp_q = q;
 	for (int i = 0; i < len; i++)
 	{

@@ -13,8 +13,7 @@ public:
 	~Money() = default;
 	Money& operator=(const Money& a) = default;
 	bool operator==(const Money& a) const;
-	bool operator<(const Money& a) const;
-	bool operator>(const Money& a) const;
+	auto operator<=>(const Money& a) const = default;
 	Money operator+(const Money& a) const;
 
 
@@ -39,8 +38,8 @@ public:
 	inline void SetR(const long r) { rubles = r; };
 
 private:
-	int kopeck = 0;
 	long rubles = 0;
+	int kopeck = 0;
 };
 
 #endif
