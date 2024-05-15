@@ -19,7 +19,7 @@ public:
 	void addAllMinMaxSum();
 private:
 	std::queue <T> _q;
-	int len = 0;
+	int _len = 0;
 };
 
 #endif
@@ -28,7 +28,7 @@ template<class T>
 inline void MyQVector<T>::Print() const
 {
 	std::queue <T> tmp_q = _q;
-	for (int i = 0; i < len;  i++)
+	for (int i = 0; i < _len;  i++)
 	{
 		std::cout << tmp_q.front() << std::endl;
 		tmp_q.pop();
@@ -39,7 +39,7 @@ template<class T>
 inline void MyQVector<T>::Add(const T& a)
 {
 	_q.push(a);
-	len++;
+	_len++;
 }
 
 template<class T>
@@ -57,7 +57,7 @@ inline void MyQVector<T>::putMinToEnd()
 				tmp = tmp1;
 			}
 	}
-	int len = _q.size();
+	int len = static_cast<int>(_q.size());
 	tmp_q = _q;
 	for (int i = 0; i < len; i++)
 	{
@@ -82,7 +82,7 @@ inline void MyQVector<T>::findByKeyAndDelete(T key)
 		}
 		tmp_q.pop();
 	}
-	int len = _q.size();
+	int len = static_cast<int>(_q.size());
 	tmp_q = _q;
 	for (int i = 0; i < len; i++)
 	{
@@ -93,6 +93,7 @@ inline void MyQVector<T>::findByKeyAndDelete(T key)
 			tmp_q.pop();
 		}
 	}
+	_len--;
 }
 
 template<class T>
@@ -121,7 +122,7 @@ inline void MyQVector<T>::addAllMinMaxSum()
 	}
 
 	T sum = min + max;
-	int len = _q.size();
+	int len = static_cast<int>(_q.size());
 	tmp_q = _q;
 	for (int i = 0; i < len; i++)
 	{
@@ -142,5 +143,5 @@ inline MyQVector<T>::MyQVector(int n)
 		std::cin >> a;
 		_q.push(a);
 	}
-	len = _q.size();
+	_len = _q.size();
 }

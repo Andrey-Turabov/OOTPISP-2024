@@ -3,8 +3,8 @@
 
 Money::Money(const double a)
 
-	:rubles(static_cast<long>(a)),
-	kopeck(static_cast<int>((a - static_cast<int>(a)) * 100))
+	:kopeck(static_cast<int>((a - static_cast<int>(a)) * 100)),
+	rubles(static_cast<long>(a))
 {
 }
 
@@ -16,7 +16,7 @@ bool Money::operator==(const Money& a) const
 		return false;
 }
 
-bool Money::operator<(const Money& a)
+bool Money::operator<(const Money& a) const
 {
 	if (this->GetR() < a.GetR())
 	{
@@ -34,7 +34,11 @@ bool Money::operator<(const Money& a)
 		return false;
 }
 
-bool Money::operator>(const Money& a)
+auto Money::operator<=>(const Money& a) const
+{
+}
+
+bool Money::operator>(const Money& a) const
 {
 	if (this->GetR() > a.GetR())
 	{
@@ -52,10 +56,10 @@ bool Money::operator>(const Money& a)
 		return false;
 }
 
-Money Money::operator+(const Money& a)
+Money Money::operator+(const Money& a) const
 {
 	auto sum = std::make_unique<Money>();
-	int RSum = this->GetR() + a.GetR();
+	long RSum = this->GetR() + a.GetR();
 	int KSum = this->GetK() + a.GetK();
 	if (KSum > 100)
 	{

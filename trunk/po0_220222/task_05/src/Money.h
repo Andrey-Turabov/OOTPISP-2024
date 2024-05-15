@@ -13,9 +13,9 @@ public:
 	~Money() = default;
 	Money& operator=(const Money& a) = default;
 	bool operator==(const Money& a) const;
-	bool operator<(const Money& a);
-	bool operator>(const Money& a);
-	Money operator+(const Money& a);
+	auto operator<=>(const Money& a) const;
+	bool operator>(const Money& a) const;
+	Money operator+(const Money& a) const;
 
 
 	friend std::ostream& operator << (std::ostream& out, const Money& a)

@@ -24,17 +24,17 @@ int main()
 	std::cout << "Task1" << std::endl;
 	
 	std::vector<float> vec;
-	vec.push_back(1.50);
-	vec.push_back(2.50);
-	vec.push_back(1.33);
-	vec.push_back(5.50);
+	vec.push_back(float(1.50));
+	vec.push_back(float(2.50));
+	vec.push_back(float(1.30));
+	vec.push_back(float(5.50));
 	
 	putMinToEnd(vec);
 	findByKeyAndDelete(vec, float(1.50));
 	addAllMinMaxSum(vec);
-	for (int i = 0; i < vec.size(); i++)
+	for(auto elt : vec)
 	{
-		std::cout << vec[i] << std::endl;
+		std::cout << elt << std::endl;
 	}
 	
 	std::cout << "-----------------------------------" << std::endl;
@@ -52,9 +52,9 @@ int main()
 	putMinToEnd(moneybagVec);
 	findByKeyAndDelete(moneybagVec, Money(1.50));
 	addAllMinMaxSum(moneybagVec);
-	for (int i = 0; i < moneybagVec.size(); i++)
+	for (auto elt1 : moneybagVec)
 	{
-		std::cout << moneybagVec[i] << std::endl;
+		std::cout << elt1 << std::endl;
 	}
 	std::cout << "-----------------------------------" << std::endl;
 
@@ -177,8 +177,9 @@ void addAllMinMaxSum(std::vector<T> &vec)
 	}
 
 	T sum = min + max;
+	int len = static_cast<int>(vec.size());
 
-	for (int i = 0; i < vec.size(); i++)
+	for (int i = 0; i < len; i++)
 	{
 		vec[i] = vec[i]+sum;
 	}
@@ -199,13 +200,15 @@ void QputMinToEnd(std::queue<T> &q)
 			tmp = tmp1;
 		}
 	}
-	int len = q.size();
+	int len = static_cast<int>(q.size());
 	tmp_q = q;
 	for (int i = 0; i < len; i++)
 	{
 		q.pop();
-		if(i!= index)
-		q.push(tmp_q.front());
+		if (i != index)
+		{
+			q.push(tmp_q.front());
+		}
 		tmp_q.pop();
 	}
 	q.push(tmp);
@@ -224,7 +227,7 @@ void QfindByKeyAndDelete(std::queue<T> &q, T key)
 		}
 		tmp_q.pop();
 	}
-	int len = q.size();
+	int len = static_cast<int>(q.size());
 	tmp_q = q;
 	for (int i = 0; i < len; i++)
 	{
@@ -263,7 +266,7 @@ void QaddAllMinMaxSum(std::queue<T> &q)
 	}
 
 	T sum = min + max;
-	int len = q.size();
+	int len = static_cast<int>(q.size());
 	tmp_q = q;
 	for (int i = 0; i < len; i++)
 	{
