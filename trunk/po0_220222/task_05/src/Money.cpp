@@ -34,10 +34,6 @@ bool Money::operator<(const Money& a) const
 		return false;
 }
 
-auto Money::operator<=>(const Money& a) const
-{
-}
-
 bool Money::operator>(const Money& a) const
 {
 	if (this->GetR() > a.GetR())
